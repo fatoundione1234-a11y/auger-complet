@@ -67,7 +67,7 @@ c5.metric("Lignes", N_LIGNES)
 
 # ── Tableau des données ───────────────────────────────────────────────────────
 with st.expander("📋 Voir le tableau complet des trous"):
-    st.dataframe(df.style.applymap(
+    st.dataframe(df.style.map(
         lambda v: f'background-color: {"#ffcccc" if v=="Stoppé" else "#ccffcc" if v=="En cours" else "#cce5ff" if v=="Foré" else ""}',
         subset=['statut']
     ), use_container_width=True)
